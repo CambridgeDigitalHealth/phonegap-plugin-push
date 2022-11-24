@@ -1,28 +1,22 @@
 {
-  "name": "phonegap-plugin-push",
-  "version": "4.0.0-dev.0",
-  "description": "Register and receive push notifications.",
-  "scripts": {
-    "build": "babel src/js --out-dir www",
-    "build:watch": "nodemon -w ./src/js -e js -x npm run build",
-    "lint": "eslint .",
-    "lint:fix": "npm run lint -- --fix",
-    "jasmine": "jasmine --config=spec/unit.json",
-    "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
-    "test": "npm run build && npm run lint && npm run jasmine"
+  "author": {
+    "name": "Erisu"
   },
-  "repository": "github:havesource/cordova-plugin-push",
-  "keywords": [
-    "ecosystem:cordova",
-    "cordova-ios",
-    "cordova-android",
-    "cordova-windows",
-    "cordova-browser"
-  ],
-  "author": "Erisu",
-  "license": "MIT",
-  "bugs": "https://github.com/havesource/cordova-plugin-push/issues",
-  "homepage": "https://github.com/havesource/cordova-plugin-push#readme",
+  "bugs": {
+    "url": "https://github.com/havesource/cordova-plugin-push/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "phonegap-plugin-push",
+    "platforms": [
+      "ios",
+      "android",
+      "windows",
+      "browser"
+    ]
+  },
+  "deprecated": false,
+  "description": "Register and receive push notifications.",
   "devDependencies": {
     "@babel/cli": "^7.15.4",
     "@babel/core": "^7.15.5",
@@ -38,31 +32,46 @@
   },
   "engines": {
     "cordovaDependencies": {
-      "3.0.0": {
+      "1.0.0": {
         "cordova": ">=10.0.0",
-        "cordova-android": ">=9.0.0",
-        "cordova-ios": ">=6.0.0"
+        "cordova-android": ">=8.0.0",
+        "cordova-ios": ">=5.1.1"
       },
       "2.0.0": {
         "cordova": ">=10.0.0",
         "cordova-android": ">=8.0.0",
         "cordova-ios": ">=6.0.0"
       },
-      "1.0.0": {
+      "3.0.0": {
         "cordova": ">=10.0.0",
-        "cordova-android": ">=8.0.0",
-        "cordova-ios": ">=5.1.1"
+        "cordova-android": ">=9.0.0",
+        "cordova-ios": ">=6.0.0"
       }
     }
   },
+  "homepage": "https://github.com/havesource/cordova-plugin-push#readme",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android",
+    "cordova-windows",
+    "cordova-browser"
+  ],
+  "license": "MIT",
+  "name": "phonegap-plugin-push",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/havesource/cordova-plugin-push.git"
+  },
+  "scripts": {
+    "build": "babel src/js --out-dir www",
+    "build:watch": "nodemon -w ./src/js -e js -x npm run build",
+    "jasmine": "jasmine --config=spec/unit.json",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
+    "test": "npm run build && npm run lint && npm run jasmine"
+  },
   "types": "./types/index.d.ts",
-  "cordova": {
-    "id": "phonegap-plugin-push",
-    "platforms": [
-      "ios",
-      "android",
-      "windows",
-      "browser"
-    ]
-  }
+  "version": "3.0.1"
 }
